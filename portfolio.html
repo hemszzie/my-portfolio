@@ -3,7 +3,7 @@
     <head>
         <!--meta-->
         <meta charset="8-UTF">
-        <meta name="viewport" content="width-device-width, initial-scale=1, shrink-to-fit=no"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
 
         <!--bootstrap-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" 
@@ -13,94 +13,277 @@
 
         <style>
           *{
-            margin: 0;
+            margin:0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
           }
 
           body{
-            background-color: rgb(223, 111, 111);
+            background: var(--bg);
           }
+
+           header
+         {
+           text-align: center;
+            padding: 10px;
+            margin: auto;
+            background-color: #df6f6f;
+          }
+          
+          header img{
+            width: 100px; 
+            border: 1px solid black;
+            border-radius: 50%;
+          }
+
+          .navbar
+          {
+            justify-content: center;
+            display: flex;
+            gap: 40px;
+            padding: 10px;
+            background-color: #bc5252;
+          }
+
+          .navbar-brand
+          {
+            font-size:large;
+            font-weight: bold;
+          }
+
+          .navbar a:hover
+          {
+            color:#d1c3c3;
+          }
+       
+          section
+          {
+             padding: 40px 20px;
+             margin: auto;
+             max-width: 1000px;    
+          }
+
+          h2{
+            margin-bottom: 20px;
+            color: #df6f6f;
+            font-weight: bold;
+            text-align: center;
+          }
+
+          #skills,#certi,#proj
+          {
+            text-align: center;
+            justify-content: center;
+          }
+
+
+          .card-group
+          {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));    
+          }
+
+          .card-body, .card-group div
+          {
+            background: white;
+            padding: 20px;
+            padding: 20px;
+            border: 2px solid #df6f6f;
+            border-radius: 20px;
+            transition: transform 0.3s ease-in;
+            text-align: center;
+            box-shadow: 0 5px 10px #bc5252;
+          }
+
+          .card-body:hover,.card-group div:hover
+          {
+            transform: translateY(-10px);
+          }
+
+          .card-body i
+          {
+            font-size: xx-large;
+            color: #df6f6f;
+            font-weight: bold;
+          }
+
+          p
+          {
+            line-height: 1.6;
+            text-align: center;
+          }
+
+          button
+          {
+            padding: 5px 10px;
+            margin-top: 10px;
+            background-color: rgb(202, 202, 25);
+            color: white;
+            border: 0;
+            border-radius: 25px;
+            font-weight:500;
+            font-size: 1rem;
+          }
+          
+          button:hover
+          {
+            background-color: rgba(165, 165, 63, 0.801);
+          }
+
+          #certi img
+          {
+            width: 100%;
+            margin-top: 20px;
+            border: 1px solid black;
+            border-radius: 5px;
+            display: none;
+          }
+
+          #contact a
+          {
+            text-decoration: none;
+            margin: 10px;
+          }
+
+          #contact a:hover
+          {
+            color: black;
+          }
+          footer{
+            background: #df6f6f;
+            text-align: center;
+            padding: 10px;
+            margin: auto;
+            font-size: 1.2rem;
+          }
+         
         </style>
     </head>
 
     <body>
 
-      <!--header section-->
-        <header><h1><i>This is my portfolio</i></h1></header>
-
-        <!--Nav bar-->
-        <nav class="navbar fixed-top bg-light">
-         <div>
-          <a class="navbar-brand" href="#home">Home</a>
-          <a class="navbar-brand" href="#about">About</a>
-          <a class="navbar-brand" href="#skills">Skills</a>
-          <a class="navbar-brand" href="#contact">Contact</a>
-         </div>
-        </nav>
-
         <!--Home section-->
-        <div id="home">
-          <img src="myimage.img" alt="My img">
+        <div id="home"> 
+
+        <!--header section-->
+        <header><h1><i>My portfolio</i></h1>
+
+          <img src="istockphoto-514585871-612x612.webp" alt="My img">
           <h1>Hema S</h1>
           <p style="font-weight: bold;">Aspiring Web Designing</p>
         </div>
 
+        </header>
+
+        <!--Nav bar-->
+        <nav class="navbar nav-fill">
+         <div>
+          <a class="navbar-brand" href="#home">Home</a>
+          <a class="navbar-brand" href="#about">About</a>
+          <a class="navbar-brand" href="#skills">Skills</a>
+          <a class="navbar-brand" href="#certi">Certificates</a>
+          <a class="navbar-brand" href="#proj">Projects</a>
+          <a class="navbar-brand" href="#contact">Contact</a>
+         </div>
+        </nav>
+
         <!--About Section-->
         <div id="about">
           <section>
-            Aimed to be in a Web developer with the foundations of web designing concepts of HTML, CSS and to make responsive of the webpages known of Javascript 
+            <h2>About Me</h2>
+            <p>Aimed to be in a Web developer with the foundations of web designing concepts of HTML, CSS and to make responsive of the webpages known of Javascript 
             and their famous frameworks like React js and other frameworks like bootstrap, I can create responsive websites with accessible interfaces 
-            and currently working on strong strength on both back-end and front-end.
+            and currently working on strong strength on both back-end and front-end.</p>
           </section>
         </div>
 
 
         <!--Skills-->
-        <div id="skills">
+        <section id="skills">
           <h2>Skills</h2>
-           <div class="card" style="width: 10rem;">
+           <div class="card-group text-center">
             <div class="card-body">
-               <i class="fa-brands fa-html5"></i><p>HTML</p></div>
+               <i class="fa-brands fa-html5"></i><p>HTML</p>
+              </div>
+            <div class="card-body">
+              <i class="fa-brands fa-css"></i><p>CSS</p>
+            </div>
+            
+            <div class="card-body">
+               <i class="fa-brands fa-bootstrap"></i><p>Bootstrap</p>
+              </div>
+
+            <div class="card-body">
+               <i class="fa-brands fa-js"></i><p>Javascript</p>
+              </div>
+
+            <div class="card-body">
+               <i class="fa-brands fa-react"></i><p>React</p>
+              </div>
+
+            <div class="card-body">
+               <i class="fa-brands fa-github"></i><p>Git & Github</p>
+              </div>
+
+            </div>
+        </section>
+            
+        <!--Certificates-->
+        <section id="certi">
+          <h2>Certificates</h2>
+          <div class="card-group text-center">
+            <div><h3>Istudio<br>Training Certificate</h3><p>Training certificate from the Istudio in the domain of web desiging.</p>
+                 <button onclick="certificate('cert1')" value="certificate">View Certificate</button>
+                 <img id="cert1" src="photo-1612214495858-4f32b96155a7.avif" alt="Certificate">
             </div>
 
-             <div class="card" style="width: 10rem;">
-            <div class="card-body">
-              <i class="fa-brands fa-css"></i><p>CSS</p></div>
+              <div> <h3>Istudio<br>Internship certificate</h3><p>Internship certificate from the Istudio in the domain of web desiging with building a E-commerce website.</p>
+                 <button onclick="certificate('cert2')" value="certificate">View Certificate</button>
+                 <img id="cert2" src="photo-1612214495858-4f32b96155a7.avif" alt="Certificate">
             </div>
 
-             <div class="card" style="width: 10rem;">
-            <div class="card-body">
-               <i class="fa-brands fa-bootstrap"></i><p>Bootstrap</p></div>
+              <div><h3>Scaler <br>Java certificate</h3><p>Java Fundamentals certificate from the Scaler in the domain of Java Base.</p>
+                 <button onclick="certificate('cert3')" value="certificate">View Certificate</button>
+                 <img id="cert3" src="photo-1612214495858-4f32b96155a7.avif" alt="Certificate">
             </div>
+          </div>
+        </section>
 
-             <div class="card" style="width: 10rem;">
-            <div class="card-body">
-               <i class="fa-brands fa-js"></i><p>Javascript</p></div>
-            </div>
 
-             <div class="card" style="width: 10rem;">
-            <div class="card-body">
-               <i class="fa-brands fa-react"></i><p>React</p></div>
-            </div>
-
-             <div class="card" style="width: 10rem;">
-            <div class="card-body">
-               <i class="fa-brands fa-github"></i><p>Git & Github</p></div>
-            </div>
-        </div>
-
+        <!--Projects-->
+        <section id="proj">
+          <h2>Projects</h2>
+          <div class="card-group text-center">
+            <div><h3>Portfolio</h3>Built with Html, css, Js & Bootstrap. Created a personal portfolio website to showcase my web development projects,skills and contact information.</div>
+            <div><h3>E-commere Website</h3>Responsive shopping website built with HTML, CSS, JS. Includes product filtering and basic cart functionality</div>
+          </div>
+        </section>
 
         <!--contact-->
         <div id="contact">
-          <section>
-            <p>Email:<a href="mailto:hema.s.yahoo@gmail.com" style="text-decoration: none;">hema.s.yahoo@gmail.com</a>
-          </p>
-        <p>Location: Bangalore,Karnataka,India.</p>
-        </section>
-          
+            <h2>Contact Us</h2>
+             <div>
+               <p>Email: <a href="mailto:hema.s.yahoo@gmail.com" style="text-decoration: none;">hema.s.yahoo@gmail.com</a><br>
+              Location: Bangalore,India.<br>
+              <a href=""><i class="fa-brands fa-linkedin"></i> Linkedin</a>
+              <a href=""><i class="fa-brands fa-github"></i> GitHub</a></p>
+             </div>
         </div>
+
         <!--footer-->
+        <footer>
+          © 2025 Hema S. all the rights reserved.
+        </footer>
     </body>
+
+    <script>
+      function certificate(id)
+      {
+        const cer=document.getElementById(id);
+        cer.style.display = cer.style.display === "none" ? "block" : "none";
+      }
+    </script>
 </html>
